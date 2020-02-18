@@ -1,32 +1,43 @@
 ##	gluon site.mk makefile example
 
+##	GLUON_FEATURES
+#		Specify Gluon features/packages to enable;
+#		Gluon will automatically enable a set of packages
+#		depending on the combination of features listed
+
+GLUON_FEATURES := \
+	autoupdater \
+	ebtables-filter-multicast \
+	ebtables-filter-ra-dhcp \
+	ebtables-limit-arp \
+	mesh-batman-adv-14 \
+	mesh-vpn-fastd \
+	radvd \
+	respondd \
+	status-page \
+	web-advanced \
+	web-wizard
+
+##	GLUON_MULTIDOMAIN
+#		Build gluon with multidomain support.
+
+GLUON_MULTIDOMAIN=1
+
 ##	GLUON_SITE_PACKAGES
 #		specify gluon/openwrt packages to include here
 #		The gluon-mesh-batman-adv-* package must come first because of the dependency resolution
 
+
+
 GLUON_SITE_PACKAGES := \
     
 GLUON_SITE_PACKAGES := \
-    gluon-mesh-batman-adv-14 \
-    gluon-respondd \
-    gluon-autoupdater \
-    gluon-config-mode-autoupdater \
-    gluon-config-mode-contact-info \
-    gluon-config-mode-core \
     gluon-config-mode-geo-location \
-    gluon-config-mode-hostname \
-    gluon-config-mode-mesh-vpn \
     gluon-ebtables-filter-multicast \
     gluon-ebtables-filter-ra-dhcp \
-    gluon-web-admin \
     -gluon-web-autoupdater \
-    gluon-web-network \
-    gluon-web-wifi-config \
     gluon-web-private-wifi \
-    gluon-mesh-vpn-fastd \
-    gluon-radvd \
     gluon-setup-mode \
-    gluon-status-page \
     haveged \
     iptables \
     iwinfo \
@@ -42,7 +53,7 @@ GLUON_SITE_PACKAGES := \
 #			opkg compare-versions "$1" '>>' "$2"
 #		to decide if a version is newer or not.
 
-DEFAULT_GLUON_RELEASE := uelzen-1.07
+DEFAULT_GLUON_RELEASE := 1.10
 
 
 ##	GLUON_RELEASE
@@ -62,5 +73,3 @@ GLUON_REGION ?= eu
 
 # Languages to include
 GLUON_LANGS ?= en de
-
-GLUON_MULTIDOMAIN=1
