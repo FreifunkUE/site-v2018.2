@@ -28,7 +28,6 @@ GLUON_MULTIDOMAIN=1
 #		The gluon-mesh-batman-adv-* package must come first because of the dependency resolution
 
 
-
 GLUON_SITE_PACKAGES := \
     
 GLUON_SITE_PACKAGES := \
@@ -38,14 +37,22 @@ GLUON_SITE_PACKAGES := \
     -gluon-web-autoupdater \
     gluon-web-private-wifi \
     gluon-setup-mode \
+    ffue-banner \
     haveged \
     iptables \
     iwinfo \
-    ffho-autoupdater-wifi-fallback \
-    ffho-web-autoupdater 
+   	respondd-module-airtime \
+    tecff-autoupdater-wifi-fallback
 
 # Wenn FFHO-web-autoupdater weg ist, dann web-autoupdater einschalten!
 #
+
+#	some models and targets have to be excluded:
+ifeq ($(GLUON_TARGET),ar71xx-tiny)
+	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
+else
+    GLUON_SITE_PACKAGES += tcpdump mtr ip-full
+endif
 
 ##	DEFAULT_GLUON_RELEASE
 #		version string to use for images
@@ -72,4 +79,4 @@ GLUON_PRIORITY ?= 0
 GLUON_REGION ?= eu
 
 # Languages to include
-GLUON_LANGS ?= en de
+GLUON_LANGS ?= de en

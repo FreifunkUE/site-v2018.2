@@ -1,5 +1,9 @@
-GLUON_SITE_FEEDS='ffho'
+GLUON_SITE_FEEDS="ssidchanger ffgt"
 
-PACKAGES_FFHO_REPO=https://github.com/FreifunkHochstift/ffho-packages.git
-PACKAGES_FFHO_BRANCH=master
-PACKAGES_FFHO_COMMIT=a2521ef8cd6774a0470a7b2568d0240e679e95e7
+PACKAGES_FFGT_REPO=https://github.com/ffgtso/ffgt_packages-v2018.1.git
+PACKAGES_FFGT_COMMIT=LATEST
+PACKAGES_FFGT_BRANCH=master
+
+PACKAGES_SSIDCHANGER_REPO=https://github.com/freifunk-nord/gluon-ssid-changer.git
+PACKAGES_SSIDCHANGER_COMMIT=a1a0dd80e4b5abf17ee689bbabaaf436033668b6
+PACKAGES_SSIDCHANGER_BRANCH=2018.1.x
