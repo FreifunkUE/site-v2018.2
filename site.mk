@@ -42,7 +42,8 @@ GLUON_SITE_PACKAGES := \
     iptables \
     iwinfo \
    	respondd-module-airtime \
-    tecff-autoupdater-wifi-fallback
+    tecff-autoupdater-wifi-fallback \
+    ffue-migrate-to-multidomain
 
 # Wenn FFHO-web-autoupdater weg ist, dann web-autoupdater einschalten!
 #
