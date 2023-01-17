@@ -80,3 +80,5 @@ GLUON_REGION ?= eu
 
 # Languages to include
 GLUON_LANGS ?= de en
+
+GLUON_DEPRECATED = upgrade
