@@ -44,7 +44,8 @@ GLUON_SITE_PACKAGES := \
    	respondd-module-airtime \
     tecff-autoupdater-wifi-fallback \
     ffgt-speedtest \
-    ffue-migrate-to-multidomain
+    ffue-migrate-to-multidomain \
+    gluon-respondd-ffgt
 
 # Wenn FFHO-web-autoupdater weg ist, dann web-autoupdater einschalten!
 #
