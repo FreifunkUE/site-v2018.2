@@ -43,6 +43,7 @@ GLUON_SITE_PACKAGES := \
     iwinfo \
    	respondd-module-airtime \
     tecff-autoupdater-wifi-fallback \
+    ffgt-speedtest \
     ffue-migrate-to-multidomain
 
 # Wenn FFHO-web-autoupdater weg ist, dann web-autoupdater einschalten!
