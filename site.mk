@@ -16,6 +16,7 @@ GLUON_FEATURES := \
 	respondd \
 	status-page \
 	web-advanced \
+	web-private-wifi \
 	web-wizard
 
 ##	GLUON_MULTIDOMAIN
@@ -34,8 +35,7 @@ GLUON_SITE_PACKAGES := \
     gluon-config-mode-geo-location \
     gluon-ebtables-filter-multicast \
     gluon-ebtables-filter-ra-dhcp \
-    -gluon-web-autoupdater \
-    gluon-web-private-wifi \
+    gluon-web-autoupdater \
     gluon-setup-mode \
     ffue-banner \
     haveged \
