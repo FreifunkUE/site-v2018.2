@@ -33,6 +33,7 @@ GLUON_SITE_PACKAGES := \
     
 GLUON_SITE_PACKAGES := \
     gluon-config-mode-geo-location \
+    gluon-config-mode-domain-select \
     gluon-ebtables-filter-multicast \
     gluon-ebtables-filter-ra-dhcp \
     gluon-web-autoupdater \
@@ -54,7 +55,7 @@ GLUON_SITE_PACKAGES := \
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
 else
-    GLUON_SITE_PACKAGES += tcpdump mtr ip-full
+    GLUON_SITE_PACKAGES += tcpdump mtr ip-full gluon-config-mode-geo-location-osm
 endif
 
 ##	DEFAULT_GLUON_RELEASE
