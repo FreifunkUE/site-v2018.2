@@ -55,7 +55,7 @@ GLUON_SITE_PACKAGES := \
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
 else
-    GLUON_SITE_PACKAGES += tcpdump mtr ip-full gluon-config-mode-geo-location-osm
+    GLUON_SITE_PACKAGES += tcpdump mtr ip-full gluon-config-mode-geo-location-osm gluon-web-osm
 endif
 
 ##	DEFAULT_GLUON_RELEASE
