@@ -58,7 +58,7 @@ GLUON_SITE_PACKAGES := \
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_SITE_PACKAGES -= gluon-web-osm gluon-config-mode-geo-location-osm
 else
-    GLUON_SITE_PACKAGES += tcpdump mtr ip-full gluon-config-mode-geo-location-osm gluon-web-osm
+    GLUON_SITE_PACKAGES += tcpdump mtr ip-full
 endif
 
 ##	DEFAULT_GLUON_RELEASE
@@ -67,7 +67,7 @@ endif
 #			opkg compare-versions "$1" '>>' "$2"
 #		to decide if a version is newer or not.
 
-DEFAULT_GLUON_RELEASE := 1.10
+DEFAULT_GLUON_RELEASE := 1.2
 
 
 ##	GLUON_RELEASE
