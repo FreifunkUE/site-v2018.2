@@ -7,9 +7,10 @@
 
 GLUON_FEATURES := \
 	autoupdater \
-	ebtables-filter-multicast \
+    ebtables-filter-multicast \
 	ebtables-filter-ra-dhcp \
 	ebtables-limit-arp \
+	config-mode-geo-location-osm \
 	mesh-batman-adv-14 \
 	mesh-vpn-fastd \
 	radvd \
@@ -37,7 +38,9 @@ GLUON_SITE_PACKAGES := \
     gluon-ebtables-filter-multicast \
     gluon-ebtables-filter-ra-dhcp \
     gluon-web-autoupdater \
+    gluon-web-osm \
     gluon-setup-mode \
+    gluon-ssid-changer \
     ffue-banner \
     haveged \
     iptables \
@@ -53,7 +56,7 @@ GLUON_SITE_PACKAGES := \
 
 #	some models and targets have to be excluded:
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
-	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
+	GLUON_SITE_PACKAGES -= gluon-web-osm gluon-config-mode-geo-location-osm
 else
     GLUON_SITE_PACKAGES += tcpdump mtr ip-full gluon-config-mode-geo-location-osm gluon-web-osm
 endif
