@@ -54,13 +54,25 @@ GLUON_SITE_PACKAGES := \
 # Wenn FFHO-web-autoupdater weg ist, dann web-autoupdater einschalten!
 #
 
+GLUON_SITE_PACKAGES += tcpdump mtr ip-full
+
 #	some models and targets have to be excluded:
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_SITE_PACKAGES = -gluon-web-osm
 	GLUON_SITE_PACKAGES = -gluon-config-mode-geo-location-osm
-else
-    GLUON_SITE_PACKAGES += tcpdump mtr ip-full
+	GLUON_SITE_PACKAGES = -ip-full
+	GLUON_SITE_PACKAGES = -mtr
+	GLUON_SITE_PACKAGES = -tcpdump
 endif
+
+ifeq ($(GLUON_TARGET),ramips-rt305x)
+	GLUON_SITE_PACKAGES = -gluon-web-osm
+	GLUON_SITE_PACKAGES = -gluon-config-mode-geo-location-osm
+	GLUON_SITE_PACKAGES = -ip-full
+	GLUON_SITE_PACKAGES = -mtr
+	GLUON_SITE_PACKAGES = -tcpdump
+endif
+
 
 ##	DEFAULT_GLUON_RELEASE
 #		version string to use for images
