@@ -56,7 +56,8 @@ GLUON_SITE_PACKAGES := \
 
 #	some models and targets have to be excluded:
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
-	GLUON_SITE_PACKAGES -= gluon-web-osm gluon-config-mode-geo-location-osm
+	GLUON_SITE_PACKAGES = -gluon-web-osm
+	GLUON_SITE_PACKAGES = -gluon-config-mode-geo-location-osm
 else
     GLUON_SITE_PACKAGES += tcpdump mtr ip-full
 endif
