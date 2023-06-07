@@ -47,6 +47,7 @@ GLUON_SITE_PACKAGES := \
     iwinfo \
    	respondd-module-airtime \
     tecff-autoupdater-wifi-fallback \
+    wpa-supplicant-dummy \
     ffgt-speedtest \
     ffue-migrate-to-multidomain \
     ffgt-gluon-respondd
